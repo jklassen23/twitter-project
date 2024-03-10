@@ -1,0 +1,40 @@
+<div class="user-profile" *ngIf="user">
+    <mat-card>
+      <mat-card-header>
+        <mat-card-title>User Profile: {{ user.username }}</mat-card-title>
+        <mat-card-subtitle>Name: {{ user.firstName }} {{ user.lastName }}</mat-card-subtitle>
+        <mat-card-subtitle>Location: {{ user.country }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ user.bio }}</p>
+      </mat-card-content>
+      <mat-card-actions *ngIf="isLoggedIn(user?.username)">
+        <button mat-button [routerLink]="['/user', user.username]">Edit</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+  
+  <form *ngIf="isLoggedIn(user?.username)" (ngSubmit)="addPost()" class="post-form">
+    <mat-form-field appearance="outline">
+      <mat-label>Post Content</mat-label>
+      <textarea matInput placeholder="Enter content" name="content" [(ngModel)]="newPost.content"></textarea>
+    </mat-form-field>
+    <button type="submit">Post</button>
+  </form>
+  
+  <h1>Posts</h1>
+  <div *ngIf="postList">
+    <mat-card *ngFor="let post of postList" class="post-card">
+      <mat-card-header>
+        <mat-card-title>{{ post.username }}</mat-card-title>
+        <mat-card-subtitle>{{ post.dateTime }}</mat-card-subtitle>
+      </mat-card-header>
+      <mat-card-content>
+        <p>{{ post.content }}</p>
+      </mat-card-content>
+      <mat-card-actions *ngIf="isLoggedIn(post.username)">
+        <button mat-button [routerLink]="['/post', post.postId]">Edit</button>
+        <button mat-button (click)="deletePost(post)">Delete</button>
+      </mat-card-actions>
+    </mat-card>
+  </div>

@@ -1,0 +1,31 @@
+h1 {
+    max-width: auto;
+    display: flex;
+    justify-content: center;
+}
+  .post-form {
+    display: flex;
+    max-width: 600px;
+    margin: 20px auto;
+    justify-content: center;
+  }
+  
+  .post-card {
+    max-width: 600px;
+    margin: 20px auto;
+  }
+  
+  button {
+    padding: 0px 20px;
+    background-color: #4CAF50;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 10px;
+    height: 40px;
+  }
+  
+  button:hover {
+    background-color: #45a049;
+  }

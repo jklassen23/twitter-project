@@ -1,0 +1,20 @@
+<h1>REGISTER</h1>
+<form class="editForm" (ngSubmit)="signUp()">
+    <div class="inputCSS">
+    <label>First Name  </label>
+    <input placeholder="Enter First Name" type="text" name="firstName" [(ngModel)]="newUser.firstName"><br><br>
+    <label>Last Name  </label>
+    <input placeholder="Enter Last Name" type="text" name="lastName" [(ngModel)]="newUser.lastName"><br><br>
+    <label>Username  </label>
+    <input placeholder="Enter Username" type="text" name="username" [(ngModel)]="newUser.username"><br><br>
+    <label>Password  </label>
+    <input placeholder="Enter Password" type="text" name="password" [(ngModel)]="newUser.password"><br><br>
+    <label>Bio  </label>
+    <input placeholder="Enter bio" type="text" name="bio" [(ngModel)]="newUser.bio"><br><br>
+    <label>Country  </label>
+    <input placeholder="Enter country" type="text" name="country" [(ngModel)]="newUser.country"><br><br>
+  </div>
+    <button>
+      Sign Up
+    </button>
+</form>

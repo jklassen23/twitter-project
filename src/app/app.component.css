@@ -1,0 +1,31 @@
+nav {
+    background-color: #0b9c37;
+    padding: 10px;
+  }
+  
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+  }
+  
+  span {
+    color: white;
+  }
+  
+  button {
+    background-color: #DC3545;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #C82333;
+  }

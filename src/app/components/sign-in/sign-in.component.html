@@ -1,0 +1,15 @@
+<h1>LOGIN</h1>
+<form class="editForm" (ngSubmit)="signin()">
+    <div class="inputCSS">
+    <label>Username </label>
+    <input placeholder="Enter username" type="text" name="username" [(ngModel)]="username">
+    <br><br>
+    <label>Password  </label>
+    <input placeholder="Enter password" type="password" name="password" [(ngModel)]="password">
+    <br><br>
+    </div>
+    <button type="submit">
+      Sign In
+    </button>
+</form>
+

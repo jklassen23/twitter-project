@@ -1,0 +1,16 @@
+<h1>Edit User Details</h1>
+<form class="editForm" *ngIf="isLoggedIn(user?.username)" (ngSubmit)="editUser()">
+    <div class="inputCSS">
+    <label>First Name  </label>
+    <input placeholder="Enter First Name" type="text" name="firstName" [(ngModel)]="user.firstName"><br><br>
+    <label>Last Name  </label>
+    <input placeholder="Enter Last Name" type="text" name="lastName" [(ngModel)]="user.lastName"><br><br>
+    <label>Bio  </label>
+    <input placeholder="Enter bio" type="text" name="bio" [(ngModel)]="user.bio"><br><br>
+    <label>Country  </label>
+    <input placeholder="Enter country" type="text" name="country" [(ngModel)]="user.country"><br><br>
+  </div>
+    <button>
+      Save
+    </button>
+</form>

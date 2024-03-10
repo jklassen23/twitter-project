@@ -1,0 +1,9 @@
+<h1>Edit Post</h1>
+<form class="editForm" #form="ngForm" (ngSubmit)="updatePost()">
+    <div class="inputCSS">
+        <label>Content</label>
+        <input type="text" name="description" [(ngModel)]="Post.content">
+    </div>
+    <button type="submit">Update</button>
+</form>
+
